@@ -38,6 +38,12 @@ cert = staging_certificate(enrollment_id)
 cert_pem = staging_full_chain(enrollment_id)
 ```
 
+You can optionally configure an `.edgerc` filename and section:
+
+```ruby
+client = Akamai::API::CPS.new(edgerc: '~/.edgerc-qa', section: 'cps')
+```
+
 ## Authors
 
 Authored by [Rajiv Aaron Manglani](https://www.rajivmanglani.com/).
