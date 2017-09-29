@@ -8,10 +8,10 @@ require 'uri'
 module Akamai
   module API
     class CPS
-      def initialize(edgerc: '~/.edgerc', section: 'default')
+      def initialize(edgerc: '~/.edgerc', section: 'default', debug: false)
         edgerc_path = File.expand_path(edgerc)
         @http = Akamai::Edgegrid::HTTP.new(get_host(edgerc_path, section), 443)
-        @http.setup_from_edgerc(debug: true, filename: edgerc_path, section: section)
+        @http.setup_from_edgerc(debug: debug, filename: edgerc_path, section: section)
       end
 
       def enrollments(contract_id)

@@ -44,6 +44,12 @@ You can optionally configure an `.edgerc` filename and section:
 client = Akamai::API::CPS.new(edgerc: '~/.edgerc-qa', section: 'cps')
 ```
 
+The client also supports printing of debug messages:
+
+```ruby
+client = Akamai::API::CPS.new(debug: true)
+```
+
 ## Authors
 
 Authored by [Rajiv Aaron Manglani](https://www.rajivmanglani.com/).
